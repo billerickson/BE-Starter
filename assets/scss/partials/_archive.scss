@@ -1,0 +1,48 @@
+/* Entry Navigation
+--------------------------------------------- */
+
+.pagination {
+	margin: 32px auto;
+	max-width: var(--wp--custom--layout--page);
+
+	ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		gap: 8px;
+		align-items: center;
+
+		li {
+			list-style-type: none;
+			display: inline-block;
+
+			a {
+				background: var(--wp--preset--color--background);
+				border: var(--wp--custom--border-width--tiny) solid var(--wp--preset--color--primary);
+				border-radius: var(--wp--custom--border-radius--tiny);
+				color: var(--wp--preset--color--primary);
+				fill: var(--wp--preset--color--primary);
+				width: 44px;
+				height: 44px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: var(--wp--preset--font-size--small);
+				font-weight: 700;
+				text-align: center;
+				text-decoration: none;
+			}
+
+			svg {
+				fill: inherit;
+			}
+
+			&:hover > a,
+			&.active > a {
+				background: var(--wp--preset--color--primary);
+				color: var(--wp--preset--color--background);
+				fill: var(--wp--preset--color--background);
+			}
+		}
+	}
+}

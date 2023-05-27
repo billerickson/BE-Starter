@@ -1,0 +1,27 @@
+/* Archive Header
+--------------------------------------------- */
+
+.archive-header {
+	background: var(--wp--preset--color--backdrop);
+	padding: 24px 0 40px;
+}
+
+.archive-header .wrap {
+	max-width: var(--wp--custom--layout--wide);
+}
+
+.archive-header h1 {
+	margin-top: var(--wp--custom--layout--block-gap-large);
+}
+
+.archive-description > *:first-child {
+	margin-top: 0;
+}
+
+.archive-description > *:last-child {
+	margin-bottom: 0;
+}
+
+.archive-header .breadcrumb {
+	margin-bottom: var(--wp--custom--layout--block-gap-large);
+}

@@ -1,0 +1,30 @@
+body {
+	padding-bottom: 100px;
+}
+
+// Max with on ACF editor
+.acf-block-component .acf-block-fields {
+	max-width: var(--wp--custom--layout--content);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// WPForms
+.wpforms-field-hp,
+.wpforms-label-hide {
+	display: none;
+}
+
+h1.front {
+	opacity: .4;
+}
+
+.wp-block > .has-background.alignfull {
+	padding: 0;
+}
+
+.wp-block > .has-background.alignfull,
+.wp-block > .cwp-large {
+	margin-top: 0;
+	margin-bottom: 0;
+}

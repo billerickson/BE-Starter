@@ -1,0 +1,10 @@
+// Include Media
+$breakpoints: (
+	'tablet' : 768px, // required for include-media
+	'mobile_menu' : 768px,
+	'medium' : 992px, //sidebar drop-off
+	'desktop': 1200px // required for include-media
+);
+
+@import "../modules/helpers";
+@import "../vendor/_include-media";

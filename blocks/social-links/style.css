@@ -1,0 +1,39 @@
+ul.social-links {
+	padding-left: 0;
+	display: flex;
+}
+
+ul.social-links.has-text-align-center {
+	justify-content: center;
+}
+
+ul.social-links.has-text-align-right {
+	justify-content: flex-end;
+}
+
+ul.social-links li {
+	list-style-type: none;
+}
+
+ul.social-links a {
+	width: 44px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+
+ul.social-links svg {
+	fill: var(--wp--preset--color--foreground);
+	width: 20px;
+	height: 20px;
+}
+
+ul.social-links a:hover svg {
+	fill: var(--wp--preset--color--primary);
+}
+
+.editor-styles-wrapper ul.social-links a {
+	pointer-events: none;
+}

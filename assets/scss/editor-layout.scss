@@ -1,0 +1,34 @@
+@import "partials/base";
+
+.editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper > *,
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > * {
+
+	.full-width-content &,
+	.block-area-before-footer & {
+		max-width: var(--wp--custom--layout--wide);
+	}
+
+	.block-area-sidebar & {
+		max-width: var(--wp--custom--layout--sidebar);
+	}
+
+	.block-area-after-post &,
+	.block-area-before-recipe & {
+		max-width: var(--wp--custom--layout--content);
+	}
+
+	&.alignfull {
+		margin-left: calc( -1 * var(--wp--custom--layout--padding) ) !important;
+		margin-right: calc( -1 * var(--wp--custom--layout--padding) ) !important;
+	}
+
+}
+
+.editor-styles-wrapper {
+	padding-left: var(--wp--custom--layout--padding);
+	padding-right: var(--wp--custom--layout--padding);
+}
+
+body.full-width-content .editor-styles-wrapper {
+	--wp--custom--layout--page: var(--wp--custom--layout--wide);
+}

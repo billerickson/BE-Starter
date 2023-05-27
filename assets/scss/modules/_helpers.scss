@@ -1,0 +1,113 @@
+/**
+ * Button Reset
+ *
+ */
+@mixin button-reset() {
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	padding: 0;
+	outline: none;
+	cursor: pointer;
+}
+
+/**
+ * Size
+ *
+ */
+@mixin size( $icon_size, $container_size: null ) {
+	width: $icon_size;
+	height: $icon_size;
+
+    @if ( $container_size ) {
+        margin-top: calc( ( #{$container_size} - #{$icon_size} ) / 2 );
+    }
+}
+
+/**
+ * Block Cover
+ * Creates a block that covers the full width/height of parent div. Typically used on a :before pseudo element
+ */
+@mixin block-cover() {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/**
+ * Placeholder Color
+ *
+ */
+@mixin placeholder-color( $color ) {
+
+  ::-moz-placeholder {
+  	color: $color;
+  	opacity: 1;
+  }
+
+  ::-ms-input-placeholder {
+  	color: $color;
+  }
+
+  ::-webkit-input-placeholder {
+  	color: $color;
+  }
+
+  input:focus::-webkit-input-placeholder,
+  input:focus::-moz-placeholder,
+  input:focus:-ms-input-placeholder,
+  textarea:focus::-webkit-input-placeholder,
+  textarea:focus::-moz-placeholder,
+  textarea:focus:-ms-input-placeholder {
+  	color:transparent;
+  }
+
+}
+
+/**
+ * Clearfix
+ *
+ */
+@mixin clearfix() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+/**
+ * Font Sizes
+ *
+**/
+@mixin font-sizes( $base: null, $tablet: null, $medium: null, $large: null ) {
+
+    @if ( $base ) {
+        font-size: $base;
+    }
+
+    @if( $tablet ) {
+        @include media(">=tablet") {
+            font-size: $tablet;
+        }
+    }
+
+    @if( $medium ) {
+        @include media(">=medium") {
+            font-size: $medium;
+        }
+    }
+
+    @if( $large ) {
+        @include media(">=desktop") {
+            font-size: $large;
+        }
+    }
+
+}

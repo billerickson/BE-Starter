@@ -1,0 +1,64 @@
+/* WordPress SEO
+--------------------------------------------- */
+
+.breadcrumb {
+	margin: 0 auto 16px;
+	line-height: var(--wp--custom--line-height--small);
+	font-size: var(--wp--preset--font-size--tiny);
+	max-width: var(--wp--custom--layout--page);
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+	.sep {
+		margin: 0 4px;
+	}
+
+	.archive-header &,
+	.post-header & {
+		max-width: 100%;
+		grid-column: 1 / -1;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+/* WPForms
+--------------------------------------------- */
+
+div.wpforms-container {
+
+	.wpforms-title {
+		font-size: var(--wp--preset--font-size--x-large);
+		line-height: var(--wp--custom--line-height--small);
+		margin: 0 0 16px;
+		padding: 0;
+	}
+
+	.wpforms-description {
+		margin: 0 0 16px;
+		padding: 0;
+	}
+
+	.wpforms-field {
+		padding: 0;
+		margin-bottom: 16px;
+
+		// See custom honeypot in /inc/wpforms.php
+		&.impound {
+			display: none;
+		}
+	}
+
+	.wpforms-field-sublabel {
+		font-size: var(--wp--preset--font-size--min);
+	}
+
+	.wpforms-submit-container {
+		padding: 0;
+		margin-top: 16px;
+		text-align: left;
+	}
+
+}
+
