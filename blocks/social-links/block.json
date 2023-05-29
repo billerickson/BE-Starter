@@ -6,8 +6,7 @@
     "category": "theme",
     "icon": "",
     "apiVersion": 2,
-    "keywords": [
-    ],
+    "keywords": [],
     "acf": {
         "mode": "preview",
 		"renderTemplate": "render.php"
