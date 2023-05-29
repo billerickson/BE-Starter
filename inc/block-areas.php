@@ -21,7 +21,7 @@ function block_areas() {
 /**
  * Block Area Name
  */
-function block_arbe_name( $block_area ) {
+function block_area_name( $block_area ) {
 	return ucwords( str_replace( '-', ' ', $block_area ) );
 }
 
@@ -80,7 +80,7 @@ function register_field_group() {
 
 	$choices = [];
 	foreach( $block_areas as $block_area ) {
-		$choices[ $block_area ] = block_arbe_name( $block_area );
+		$choices[ $block_area ] = block_area_name( $block_area );
 	}
 
 	acf_add_local_field_group(array(
@@ -179,17 +179,17 @@ function admin_column( $columns ) {
 	}
 	return $new;
 }
-add_filter( 'manage_block_arbe_posts_columns', __NAMESPACE__ . '\admin_column' );
+add_filter( 'manage_block_area_posts_columns', __NAMESPACE__ . '\admin_column' );
 
 /**
  * Admin column value
  */
 function admin_column_value( $column_name, $post_id ) {
 	if ( 'be_block_area' === $column_name ) {
-		echo block_arbe_name( get_post_meta( get_the_ID(), 'be_block_area', true ) );
+		echo block_area_name( get_post_meta( get_the_ID(), 'be_block_area', true ) );
 	}
 }
-add_action( 'manage_block_arbe_posts_custom_column', __NAMESPACE__ . '\admin_column_value', 10, 2 );
+add_action( 'manage_block_area_posts_custom_column', __NAMESPACE__ . '\admin_column_value', 10, 2 );
 
 /**
  * Admin body class
