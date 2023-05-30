@@ -7,7 +7,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 var(--wp--style--block-gap);
+	margin: 0 0 var(--wp--style--block-gap);
 }
 
 /* Image
@@ -88,7 +88,7 @@ figure.wp-caption {
 	@include media(">=1200px") {
 		.full-width-content .entry-content > &,
 		.full-width-content .block-area > & {
-			
+
 			&.alignleft {
 				max-width: calc( var(--wp--custom--layout--wide) / 2 );
 				margin-left: calc( calc( 100vw - var(--wp--custom--layout--wide ) ) / 2 );
