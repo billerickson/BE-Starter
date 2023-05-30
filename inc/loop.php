@@ -69,7 +69,7 @@ function be_entry_header_in_content( $output, $block ) {
 		echo $output;
 		do_action( 'be_entry_title_after' );
 		$output = ob_get_clean();
-		remove_filter( 'render_block', 'be_entry_header_in_content', 10, 2 );
+		remove_filter( 'render_block', 'be_entry_header_in_content', 10 );
 	}
 
 	return $output;

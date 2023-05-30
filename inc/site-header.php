@@ -68,7 +68,7 @@ function be_nav_add_dropdown_icons( $output, $item, $depth, $args ) {
 		return $output;
 	}
 
-	if ( 1 === $args->depth ) {
+	if ( isset( $args->depth ) && 1 === $args->depth ) {
 		return $output;
 	}
 

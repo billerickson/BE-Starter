@@ -47,7 +47,7 @@ function be_login_logo() {
 			height: %dpx;
 		}',
 		esc_url( $logo ),
-		esc_attr( $height )
+		$height
 	);
 	wp_add_inline_style( 'theme-style', $styles );
 }
