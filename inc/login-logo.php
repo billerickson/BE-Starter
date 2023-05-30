@@ -34,10 +34,9 @@ function be_login_logo() {
 
 	$logo   = get_theme_file_uri( $logo_path );
 	$height = floor( $logo_height / $logo_width * 312 );
-	?>
-		<style type="text/css">
-		.login h1 a {
-			background-image: url(<?php echo esc_url( $logo ); ?>);
+	$styles = sprintf(
+		'.login h1 a {
+			background-image: url(%s);
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center center;
@@ -45,9 +44,11 @@ function be_login_logo() {
 			overflow: hidden;
 			text-indent: -9999em;
 			width: 312px;
-			height: <?php echo esc_attr( $height ); ?>px;
-		}
-		</style>
-		<?php
+			height: %dpx;
+		}',
+		esc_url( $logo ),
+		esc_attr( $height )
+	);
+	wp_add_inline_style( 'theme-style', $styles );
 }
 //add_action( 'login_head', 'be_login_logo' );
