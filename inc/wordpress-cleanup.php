@@ -64,8 +64,10 @@ add_filter( 'body_class', 'be_clean_body_classes', 20 );
  * Clean Nav Menu Classes
  *
  * @param array $classes Nav item classes.
+ * @param \WP_Post $menu_item Nav menu item.
+ * @param \stdClass $args Object of wp_nav_menu() arguments.
  */
-function be_clean_nav_menu_classes( $classes ) {
+function be_clean_nav_menu_classes( $classes, $menu_item, $args ) {
 	if ( ! is_array( $classes ) ) {
 		return $classes;
 	}
@@ -102,7 +104,7 @@ function be_clean_nav_menu_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'nav_menu_css_class', 'be_clean_nav_menu_classes', 5 );
+add_filter( 'nav_menu_css_class', 'be_clean_nav_menu_classes', 5, 3 );
 
 /**
  * Clean Post Classes
