@@ -18,6 +18,7 @@ include_once get_template_directory() . '/inc/site-header.php';
 include_once get_template_directory() . '/inc/site-footer.php';
 include_once get_template_directory() . '/inc/archive-header.php';
 include_once get_template_directory() . '/inc/archive-navigation.php';
+include_once get_template_directory() . '/inc/template-tags.php';
 
 // Functionality.
 require_once get_template_directory() . '/inc/blocks.php';

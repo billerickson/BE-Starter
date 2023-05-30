@@ -1,3 +1,52 @@
+/* Post Listing
+--------------------------------------------- */
+
+.archive .site-main {
+	max-width: var(--wp--custom--layout--page);
+	margin-inline: auto;
+	display: grid;
+	grid-template-columns: repeat( 2, minmax( 0, 1fr ) );
+	gap: var(--wp--custom--layout--block-gap);
+
+	@include media(">=tablet") {
+		grid-template-columns: repeat( 4, minmax( 0, 1fr ) );
+	}
+}
+
+.post-summary {
+
+	&__content {
+		display: grid;
+		gap: 8px;
+		padding-top: 12px;
+
+		& > * {
+			margin: 0;
+		}
+	}
+
+	.entry-category {
+		font-size: var(--wp--preset--font-size--tiny);
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	&__title {
+		font-size: var(--wp--preset--font-size--large);
+
+		a {
+			color: var(--wp--preset--color--foreground);
+			text-decoration: none;
+
+			&:hover {
+				color: var(--wp--preset--color--primary);
+			}
+		}
+	}
+}
+
 /* Entry Navigation
 --------------------------------------------- */
 
