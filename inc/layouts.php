@@ -132,7 +132,7 @@ add_filter( 'body_class', 'be_layout_body_class', 5 );
 /**
  * Page Layout
  *
- * @param int $id Post ID.
+ * @param int|false $id Post ID.
  */
 function be_page_layout( $id = false ) {
 

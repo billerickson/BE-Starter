@@ -50,6 +50,6 @@ function be_entry_image_id() {
  *
  */
 function be_entry_author() {
-	$id = get_the_author_meta( 'ID' );
+	$id = (int) get_the_author_meta( 'ID' );
 	echo '<p class="entry-author"><a href="' . get_author_posts_url( $id ) . '" aria-hidden="true" tabindex="-1">' . get_avatar( $id, 40 ) . '</a><em>by</em> <a href="' . get_author_posts_url( $id ) . '">' . get_the_author() . '</a></p>';
 }

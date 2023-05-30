@@ -26,6 +26,7 @@ function be_archive_paginated_navigation() {
 
 	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
 	$max   = (int) $wp_query->max_num_pages;
+	$links = [];
 
 	// Add current page to the array.
 	if ( $paged >= 1 ) {

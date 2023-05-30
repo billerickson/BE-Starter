@@ -143,9 +143,9 @@ add_filter( 'wpforms_overview_table_columns', 'be_wpforms_theme_locations_column
 /**
  * WPForms admin column value
  *
- * @param string $value Value.
- * @param array  $form Form.
- * @param string $column_name Column Name.
+ * @param string   $value Value.
+ * @param \WP_Post $form Form.
+ * @param string   $column_name Column Name.
  */
 function be_wpforms_theme_locations_column_value( $value, $form, $column_name ) {
 	if ( 'be_theme_location' !== $column_name ) {

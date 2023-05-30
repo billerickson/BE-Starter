@@ -29,7 +29,7 @@ function display_comments() {
 
 	echo '</div>';
 }
-add_action( 'tha_comments_before', __NAMESPACE__ . '\display_comments', 40 );
+add_action( 'tha_comments_before', __NAMESPACE__ . '\\display_comments', 40 );
 
 /**
  * Comments Tempalte
@@ -39,7 +39,7 @@ function comments_template() {
 		\comments_template();
 	}
 }
-add_action( 'tha_content_while_after', __NAMESPACE__ . '\comments_template' );
+add_action( 'tha_content_while_after', __NAMESPACE__ . '\\comments_template' );
 
 /**
  * Comment Navigation
@@ -74,17 +74,17 @@ function comment_navigation( $location = '' ) {
 function comment_link_attributes( $atts = '' ) {
 	return ' class="wp-element-button"';
 }
-add_filter( 'previous_comments_link_attributes', __NAMESPACE__ . '\comment_link_attributes' );
-add_filter( 'next_comments_link_attributes', __NAMESPACE__ . '\comment_link_attributes' );
+add_filter( 'previous_comments_link_attributes', __NAMESPACE__ . '\\comment_link_attributes' );
+add_filter( 'next_comments_link_attributes', __NAMESPACE__ . '\\comment_link_attributes' );
 
 /**
  * Staff comment class
  *
- * @param array       $classes    An array of comment classes.
- * @param string      $class      A comma-separated list of additional classes added to the list.
- * @param int         $comment_id The comment ID.
- * @param WP_Comment  $comment    The comment object.
- * @param int|WP_Post $post_id    The post ID or WP_Post object.
+ * @param array        $classes    An array of comment classes.
+ * @param string       $class      A comma-separated list of additional classes added to the list.
+ * @param int          $comment_id The comment ID.
+ * @param \WP_Comment  $comment    The comment object.
+ * @param int|\WP_Post $post_id    The post ID or WP_Post object.
  */
 function staff_comment_class( $classes, $class, $comment_id, $comment, $post_id ) {
 	if ( empty( $comment->user_id ) ) {
@@ -92,13 +92,13 @@ function staff_comment_class( $classes, $class, $comment_id, $comment, $post_id 
 	}
 	$staff_roles = array( 'comment_manager', 'author', 'editor', 'administrator' );
 	$staff_roles = apply_filters( 'be_staff_roles', $staff_roles );
-	$user        = get_userdata( $comment->user_id );
+	$user        = get_userdata( (int) $comment->user_id );
 	if ( $user instanceof \WP_User && is_array( $user->roles ) && ! empty( array_intersect( $user->roles, $staff_roles ) ) ) {
 		$classes[] = 'staff';
 	}
 	return $classes;
 }
-add_filter( 'comment_class', __NAMESPACE__ . '\staff_comment_class', 10, 5 );
+add_filter( 'comment_class', __NAMESPACE__ . '\\staff_comment_class', 10, 5 );
 
 
 /**
@@ -110,7 +110,7 @@ function remove_avatars_from_comments( $avatar ) {
 	global $in_comment_loop;
 	return $in_comment_loop ? '' : $avatar;
 }
-add_filter( 'get_avatar', __NAMESPACE__ . '\remove_avatars_from_comments' );
+add_filter( 'get_avatar', __NAMESPACE__ . '\\remove_avatars_from_comments' );
 
 /**
  * Remove URL field from comment form
@@ -121,7 +121,7 @@ function remove_url_from_comment_form( $fields ) {
 	unset( $fields['url'] );
 	return $fields;
 }
-add_filter( 'comment_form_default_fields', __NAMESPACE__ . '\remove_url_from_comment_form' );
+add_filter( 'comment_form_default_fields', __NAMESPACE__ . '\\remove_url_from_comment_form' );
 
 /**
  * Remove URL from existing comments
@@ -132,7 +132,7 @@ add_filter( 'comment_form_default_fields', __NAMESPACE__ . '\remove_url_from_com
 function remove_url_from_existing_comments( $author_link, $author ) {
 	return $author;
 }
-add_filter( 'get_comment_author_link', __NAMESPACE__ . '\remove_url_from_existing_comments', 10, 2 );
+add_filter( 'get_comment_author_link', __NAMESPACE__ . '\\remove_url_from_existing_comments', 10, 2 );
 
 /**
  * Comment form, button class
@@ -146,4 +146,4 @@ function comment_form_button_class( $args ) {
 	$args['title_reply_after'] = str_replace( 'h3', 'h2', $args['title_reply_after'] );
 	return $args;
 }
-add_filter( 'comment_form_defaults', __NAMESPACE__ . '\comment_form_button_class' );
+add_filter( 'comment_form_defaults', __NAMESPACE__ . '\\comment_form_button_class' );

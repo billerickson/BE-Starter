@@ -63,7 +63,7 @@ function register_cpt() {
 
 	register_post_type( 'block_area', $args );
 }
-add_action( 'init', __NAMESPACE__ . '\register_cpt', 20 );
+add_action( 'init', __NAMESPACE__ . '\\register_cpt', 20 );
 
 /**
  * Register Field Group
@@ -131,7 +131,7 @@ function register_field_group() {
 	));
 
 }
-add_action( 'init', __NAMESPACE__ . '\register_field_group', 20 );
+add_action( 'init', __NAMESPACE__ . '\\register_field_group', 20 );
 
 /**
  * Ensure only one post per block area
@@ -147,7 +147,7 @@ function limit_block_posts( $post_id ) {
 		return;
 	}
 
-	remove_action( 'save_post_block_area', __NAMESPACE__ . '\limit_block_posts', 10, 2 );
+	remove_action( 'save_post_block_area', __NAMESPACE__ . '\\limit_block_posts', 10 );
 
 	$others = new \WP_Query( [
 		'post_type' => 'block_area',
@@ -163,7 +163,7 @@ function limit_block_posts( $post_id ) {
 		}
 	}
 }
-add_action( 'acf/save_post', __NAMESPACE__ . '\limit_block_posts' );
+add_action( 'acf/save_post', __NAMESPACE__ . '\\limit_block_posts' );
 
 /**
  * Admin Column
@@ -179,7 +179,7 @@ function admin_column( $columns ) {
 	}
 	return $new;
 }
-add_filter( 'manage_block_area_posts_columns', __NAMESPACE__ . '\admin_column' );
+add_filter( 'manage_block_area_posts_columns', __NAMESPACE__ . '\\admin_column' );
 
 /**
  * Admin column value
@@ -189,7 +189,7 @@ function admin_column_value( $column_name, $post_id ) {
 		echo block_area_name( get_post_meta( get_the_ID(), 'be_block_area', true ) );
 	}
 }
-add_action( 'manage_block_area_posts_custom_column', __NAMESPACE__ . '\admin_column_value', 10, 2 );
+add_action( 'manage_block_area_posts_custom_column', __NAMESPACE__ . '\\admin_column_value', 10, 2 );
 
 /**
  * Admin body class
@@ -213,7 +213,7 @@ function admin_body_class( $classes ) {
 
 	return $classes;
 }
-add_filter( 'admin_body_class', __NAMESPACE__ . '\admin_body_class' );
+add_filter( 'admin_body_class', __NAMESPACE__ . '\\admin_body_class' );
 
 /**
  * Show
