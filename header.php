@@ -10,9 +10,7 @@
 
 echo '<!DOCTYPE html>';
 tha_html_before();
-?>
-<html <?php language_attributes(); ?>>
-<?php
+echo '<html ' . get_language_attributes( 'html' ) . '>';
 
 echo '<head>';
 	tha_head_top();
