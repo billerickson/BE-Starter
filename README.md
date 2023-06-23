@@ -13,11 +13,10 @@ A hybrid WordPress theme optimized and integrated with Gutenberg.
 2. Type in Twenty Twenty-One in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
 4. Go to INSERT ABOUT PAGE for a guide on how to customize this theme.
-5. Navigate to Appearance > Customize in your admin panel and customize to your taste.
 
 ## Configuration
 
-Open Appearance / Customizer on WordPress admin and go through all settings.
+Navigate to Appearance -> Customize in your admin panel and customize to your taste.
 
 ## Usage
 
