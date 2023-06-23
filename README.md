@@ -6,6 +6,7 @@ A hybrid WordPress theme optimized and integrated with Gutenberg.
 
 - PHP version 7.4
 - WordPress version 6.0
+- Advanced Custom Fields plugin 6.0
 
 ## Installation
 
