@@ -1,15 +1,15 @@
 {
-  "name": "be-starter",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "sass-dev": "sass --watch --update --style=expanded assets/scss:assets/css",
-    "sass-prod": "sass --no-source-map --style=compressed assets/scss:assets/css"
-  },
-  "author": "",
-  "license": "GPL-2.0-or-later",
-  "devDependencies": {
-    "sass": "^1.54.0"
-  }
+	"name": "be-starter",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"sass-dev": "sass --watch --update --style=expanded assets/scss:assets/css",
+		"sass-prod": "sass --no-source-map --style=compressed assets/scss:assets/css"
+	},
+	"author": "",
+	"license": "GPL-2.0-or-later",
+	"devDependencies": {
+		"sass": "^1.54.0"
+	}
 }

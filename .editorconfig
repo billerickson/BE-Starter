@@ -1,0 +1,30 @@
+# https://EditorConfig.org
+
+root = true
+
+[*]
+indent_style = tab
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+block_comment_start = /*
+block_comment = *
+block_comment_end = */
+
+[assets/scss/vendor/_include-media.scss]
+indent_style = space
+indent_size = 2
+
+[{LICENSE,package-lock.json}]
+indent_style = space
+indent_size = 2
+
+[{**.svg,**.map}]
+insert_final_newline = false
+
+[acf-json/*.json]
+indent_style = space
+indent_size = 4
+insert_final_newline = false

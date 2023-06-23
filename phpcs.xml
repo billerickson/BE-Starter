@@ -11,11 +11,10 @@
 	</rule>
 
 	<rule ref="WordPress.Security.EscapeOutput">
-	    <properties>
-	        <property name="customAutoEscapedFunctions" type="array" value="be_icon,be_mobile_menu_toggle"/>
-	    </properties>
+		<properties>
+			<property name="customAutoEscapedFunctions" type="array" value="be_icon,be_mobile_menu_toggle"/>
+		</properties>
 	</rule>
 	<rule ref="WordPress-Docs" />
 	<rule ref="WordPress-Extra" />
-
 </ruleset>
