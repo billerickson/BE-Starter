@@ -20,11 +20,6 @@
 					"name": "Background"
 				},
 				{
-					"slug": "backdrop",
-					"color": "#EEEEEE",
-					"name": "Backdrop"
-				},
-				{
 					"slug": "primary",
 					"color": "#0000EE",
 					"name": "Primary"
