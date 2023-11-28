@@ -21,7 +21,6 @@ wp.domReady( () => {
 	wp.blocks.unregisterBlockType( 'core/latest-posts' );
 	wp.blocks.unregisterBlockType( 'core/legacy-widget' );
 	wp.blocks.unregisterBlockType( 'core/loginout' );
-	wp.blocks.unregisterBlockType( 'core/media-text' );
 	wp.blocks.unregisterBlockType( 'core/navigation' );
 	wp.blocks.unregisterBlockType( 'core/navigation-link' );
 	wp.blocks.unregisterBlockType( 'core/navigation-submenu' );
