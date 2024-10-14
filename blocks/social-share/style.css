@@ -1,0 +1,33 @@
+.block-social-share {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	justify-content: space-between;
+}
+
+.block-social-share a {
+	padding: 0;
+	width: 44px;
+	height: 44px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-share__links {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.block-social-share svg {
+	fill: var(--wp--preset--color--foreground);
+}
+
+.social-share__title {
+	font-size: var(--wp--preset--font-size--large);
+}
+
+.editor-styles-wrapper .block-social-share a {
+	pointer-events: none;
+}

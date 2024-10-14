@@ -1,0 +1,28 @@
+{
+    "name": "cwp/social-share",
+    "title": "Share This Post",
+    "description": "",
+    "style": "block-social-share",
+    "category": "theme",
+    "icon": "",
+    "apiVersion": 2,
+    "keywords": [ "social" ],
+    "acf": {
+        "mode": "preview",
+		"renderTemplate": "render.php",
+		"postTypes": [ "block_area" ]
+    },
+    "styles": [],
+    "supports": {
+        "align": false,
+        "anchor": false,
+        "alignContent": false,
+        "color": {
+            "text": false,
+            "background": false,
+            "link": false
+        },
+        "alignText": false,
+        "fullHeight": false
+    }
+}
